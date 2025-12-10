@@ -1,3 +1,10 @@
+# Advent of Code specific stuff
+TestInput.txt
+
+.vscode
+node_modules
+
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,java,intellij+all,visualstudiocode,node,nextjs,vuejs
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,java,intellij+all,visualstudiocode,node,nextjs,vuejs
 

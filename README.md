@@ -1,3 +1,3 @@
-# smcd-advent-of-code-2025
+# Repo for Advent of Code Katas
 
-https://adventofcode.com/2025/day/8
+We want to solve https://adventofcode.com/2025/day/8
