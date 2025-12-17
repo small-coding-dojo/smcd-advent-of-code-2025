@@ -19,7 +19,7 @@ describe ('Playground', () => {
         expect(subject.numberOfCircuits()).to.equal(2);
     })
 
-    it ('can create a circuit', () => {
+    it ('can create a circuit with two junction boxes', () => {
         var subject = new Playground();
 
         subject.addJunctionBox({x: 1, y:1, z: 1});
@@ -31,4 +31,28 @@ describe ('Playground', () => {
         expect(subject.numberOfCircuits()).to.equal(1);
     })
 
+    it ('can create a circuit with three junction boxes', () => {
+        var subject = new Playground();
+
+        subject.addJunctionBox({x: 1, y:1, z: 1});
+        subject.addJunctionBox({x: 2, y:2, z: 2});
+        subject.addJunctionBox({x: 4, y:4, z: 4});
+
+        subject.connect(2);
+
+        expect(subject.numberOfJunctionBoxes()).to.equal(3);
+        expect(subject.numberOfCircuits()).to.equal(1);
+    })
+
+    it('can identify closest connection', () => {
+        var subject = new Playground();
+
+        subject.addJunctionBox({x: 1, y:1, z: 1});
+        subject.addJunctionBox({x: 2, y:2, z: 2});
+        subject.addJunctionBox({x: 4, y:4, z: 4});
+
+        var actual = subject.findClosestConnection();
+
+        expect(actual).deep.equal([{x: 1, y:1, z: 1}, {x: 2, y:2, z: 2}]);
+    })
 });
